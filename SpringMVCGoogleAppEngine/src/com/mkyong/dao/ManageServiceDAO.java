@@ -1,13 +1,22 @@
 package com.mkyong.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Logger;
+
+import com.google.appengine.api.datastore.QueryResultIterable;
+import com.googlecode.objectify.Key;
+import com.googlecode.objectify.NotFoundException;
+import com.googlecode.objectify.ObjectifyService;
+import com.googlecode.objectify.Query;
 import com.googlecode.objectify.util.DAOBase;
+import com.mkyong.model.Customer;
 
 
-//@Controller
-//@RequestMapping("/customer")
+
 public class ManageServiceDAO<T> extends DAOBase {
 	
-	/*public static final Logger LOG = Logger.getLogger(ManageServiceDAO.class
+	public static final Logger LOG = Logger.getLogger(ManageServiceDAO.class
 			.getName());
 
 	static {
@@ -15,49 +24,46 @@ public class ManageServiceDAO<T> extends DAOBase {
 		ObjectifyService.register(Customer.class);
 	}
 	
-	
-	@RequestMapping(value="/addCustomerPage", method = RequestMethod.GET)
-	public String getAddCustomerPage(ModelMap model) {
+	protected Class<T> clazz;
 
-		return "add";
+	public ManageServiceDAO(Class<T> clazz) {
+		this.clazz = clazz;
+	}
+
+	public Key<T> add(T book) {
+		Key<T> key = ofy().put(book);
+		return key;
+	}
+
+	public void delete(Key<T> key) {
+		ofy().delete(key);
+	}
+
+	public T get(Long id) throws NotFoundException {
+		return ofy().get(clazz, id);
+	}
+
+	public T get(Key<T> key) {
+		return ofy().get(key);
+	}
+
+	public List<T> listByProperty(String propertyName, String propertyValue) {
+		Query<T> query = ofy().query(clazz);
+		if (propertyName != null && propertyValue != null) {
+			query.filter(propertyName, propertyValue);
+
+		}
+		return asList(query.fetch());
+	}
+
+	private List<T> asList(QueryResultIterable<T> fetch) {
+		ArrayList<T> list = new ArrayList<T>();
+		for (T t : fetch) {
+			list.add(t);
+		}
+		return list;
+
 	}
 	
-	
-	@RequestMapping(value="/add", method = RequestMethod.POST)
-	public ModelAndView add(HttpServletRequest request, ModelMap model) {
-
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
-		
-	    Key customerKey = KeyFactory.createKey("Customer", name);
-	        
-		Date date = new Date();
-        Entity customer = new Entity("Customer", customerKey);
-        customer.setProperty("name", name);
-        customer.setProperty("email", email);
-        customer.setProperty("date", date);
-
-        DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-        datastore.put(customer);
-        
-        return new ModelAndView("redirect:list");
-        
-	}
-		
-
-	
-	//get all customers
-	@RequestMapping(value="/list", method = RequestMethod.GET)
-	public String listCustomer(ModelMap model) {
-
-		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
-		Query query = new Query("Customer").addSort("date", Query.SortDirection.DESCENDING);
-	    List<Entity> customers = datastore.prepare(query).asList(FetchOptions.Builder.withLimit(10));
-	    
-	    model.addAttribute("customerList",  customers);
-	    
-		return "list";
-
-	}*/
 	
 }
