@@ -1,37 +1,13 @@
 package com.mkyong.dao;
 
-import java.util.Date;
-import java.util.List;
-import java.util.logging.Logger;
-
-import javax.servlet.http.HttpServletRequest;
-
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
-
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.google.appengine.api.datastore.DatastoreService;
-import com.google.appengine.api.datastore.DatastoreServiceFactory;
-import com.google.appengine.api.datastore.Entity;
-import com.google.appengine.api.datastore.FetchOptions;
-import com.google.appengine.api.datastore.Key;
-import com.google.appengine.api.datastore.KeyFactory;
-
-import com.google.appengine.api.datastore.Query;
-
-import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.DAOBase;
-import com.mkyong.model.Customer;
 
 
-@Controller
-@RequestMapping("/customer")
+//@Controller
+//@RequestMapping("/customer")
 public class ManageServiceDAO<T> extends DAOBase {
 	
-	public static final Logger LOG = Logger.getLogger(ManageServiceDAO.class
+	/*public static final Logger LOG = Logger.getLogger(ManageServiceDAO.class
 			.getName());
 
 	static {
@@ -39,12 +15,13 @@ public class ManageServiceDAO<T> extends DAOBase {
 		ObjectifyService.register(Customer.class);
 	}
 	
+	
 	@RequestMapping(value="/addCustomerPage", method = RequestMethod.GET)
 	public String getAddCustomerPage(ModelMap model) {
 
 		return "add";
-
 	}
+	
 	
 	@RequestMapping(value="/add", method = RequestMethod.POST)
 	public ModelAndView add(HttpServletRequest request, ModelMap model) {
@@ -81,6 +58,6 @@ public class ManageServiceDAO<T> extends DAOBase {
 	    
 		return "list";
 
-	}
+	}*/
 	
 }

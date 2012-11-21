@@ -1,5 +1,6 @@
 package com.mkyong.controller;
 
+
 import java.util.Date;
 import java.util.List;
 
@@ -22,11 +23,11 @@ import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.FilterOperator;
 
-//@Controller
-//@RequestMapping("/customer")
+@Controller
+@RequestMapping("/customer")
 public class CustomerController {
 	
-	/*@RequestMapping(value="/addCustomerPage", method = RequestMethod.GET)
+	@RequestMapping(value="/addCustomerPage", method = RequestMethod.GET)
 	public String getAddCustomerPage(ModelMap model) {
 
 		return "add";
@@ -126,6 +127,6 @@ public class CustomerController {
 	    
 		return "list";
 
-	}*/
+	}
 	
 }
