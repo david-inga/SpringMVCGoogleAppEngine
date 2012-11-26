@@ -11,6 +11,8 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.Query;
 import com.googlecode.objectify.util.DAOBase;
 import com.mkyong.model.Customer;
+import com.mkyong.model.Producto;
+import com.mkyong.model.ProductoVenta;
 
 
 
@@ -22,6 +24,9 @@ public class ManageServiceDAO<T> extends DAOBase {
 	static {
 		
 		ObjectifyService.register(Customer.class);
+		ObjectifyService.register(Producto.class);
+		ObjectifyService.register(ProductoVenta.class);
+		
 	}
 	
 	protected Class<T> clazz;
@@ -64,6 +69,8 @@ public class ManageServiceDAO<T> extends DAOBase {
 		return list;
 
 	}
+	
+
 	
 	
 }
