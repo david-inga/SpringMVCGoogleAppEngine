@@ -1,0 +1,24 @@
+/* CSS Document */
+
+#cabecera li {
+	margin: 21px 6px 21px 6px;
+}
+
+#cuerpo {
+	background: url(../img/cuerpo-fondo.gif) repeat-y;
+}
+
+.contenedor-listado {
+	background: #231f20;
+  	width: 614px;
+}
+
+.contenedor-internas {
+  padding: 13px 24px 13px 24px;
+	width: 565px;
+	overflow: hidden;
+}
+
+.borde-inferior-contenedor {
+  background: url(../img/pie-de-pagina-borde-inferior.gif) -1px 0;
+}

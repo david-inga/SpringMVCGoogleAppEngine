@@ -1,27 +1,201 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
-<!-- above set at the top of the file will set     -->
-<!-- the browser's rendering engine into           -->
-<!-- "Quirks Mode". Replacing this declaration     -->
-<!-- with a "Standards Mode" doctype is supported, -->
-<!-- but may lead to some differences in layout.   -->
+
 
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>GAE + Spring MVC + CRUD example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--[if IE 6]><link rel="stylesheet" type="text/css" href="css/ie6.css"/><![endif]--> 
+	<!--[if IE 7]><link rel="stylesheet" type="text/css" href="css/ie7.css"/><![endif]-->
+
+
+	<title>Compuval</title>
+
   </head>
 
   <body>
-    <h1>Hello App Engine!</h1>
-	
-    <table>
-      <tr>
-        <td colspan="2" style="font-weight:bold;">Available Servlets:</td>        
-      </tr>
-      <tr>
-        <td><a href="customer/list">View Customers</a></td>
-      </tr>
-    </table>
+		<form id="frm" name="frm" action="#" accept-charset="UTF-8" method="post">
+    
+    <div id="contenedor">			
+        <div id="cabecera">
+            <h1 style="font-size: 51px;padding-top: 20px;"><a href="#" title="Logo">Compuval</a>
+			
+        </div>
+        		
+        <div id="encabezado-cuerpo">
+            <h2><a href="customer/list">View Customers</a><h2>
+        </div>
+        
+        
+        <div id="cuerpo">
+            
+            <div id="barra-lateral">
+				
+                <div class="bloque-standar-resaltado formulario">
+                    <div class="borde-redondeado-superior"><!--&nbsp;--></div>
+      <div id="selectores_contenido">
+                  
+                        
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size:12px;color:#fff;">
+                            <tr>
+                              <td width="13%" valign="middle" ><h5>Tienda</h5>
+                              <td width="87%" rowspan="2" align="right" valign="top" ><h4>Grupo PANA S.A.</h4></td>
+                            </tr>
+                            <tr valign="middle">
+                              <td>&nbsp;</td>
+                            </tr>
+                            
+                            <tr>
+                              <td valign="middle"><h5>Vendedor</h5></td>
+                                <td align="right" valign="middle" ><h4>Jose Caballero</h4></td>
+                            </tr>
+                    <tr>
+                              <td valign="middle"><h5>Fecha</h5></td>
+                                <td align="right" valign="middle" ><h4>23/11/2012</h4></td>
+                            </tr>
+                        </table>
+                       
+
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+                                <td width="50%" align="center" style="padding: 15px 0 5px 0;"><div id="iralhome"></div></td>
+                                <td align="center" style="padding: 15px 0 5px 0;"><div id="salir_x"><a href="#"><em>Salir</em></a></div></td>
+                            </tr>
+                        </table>
+
+                      
+						</div>
+						
+                    <div class="borde-redondeado-inferior clear"><!--&nbsp;--></div>
+                </div>
+                
+                
+				<div class="bloque-standar">
+                    <div class="borde-redondeado-superior-negro"><!--&nbsp;--></div>
+                    	<h3 class="encabezado-bloques-interno">OPCIONES</h3>   
+                    	<div id="menu_navegacion1">
+                        
+                            <div id="cargar_bd"><a href="#"><em>Opcion 1</em></a></div>
+                            <div id="m_consultar"><a href="#"><em>Opcion 2</em></a></div>
+                            <div id="m_simulador_credito_current"><a href="#"><em>Opcion 3</em></a></div>
+                            <div id="m_aprobacion_manual"><a href="#"><em>Opcion 4</em></a></div>
+                        
+                        </div>
+  
+                    
+                    <div class="borde-redondeado-inferior clear"><!--&nbsp;--></div>
+                </div>
+
+            </div><!-- /barra-lateral -->
+            
+
+            
+            <div id="contenido">
+
+			<div class="borde-redondeado-superior-contenido"><!--&nbsp;--></div>
+                <div class="contenedor-listado">
+<div class="contenedor-internas">
+                        
+                        <!--De ser necesarios-->
+                        <div class="aladerecha"></div>
+                      
+                      <h2>Enviar Solicitud </h2>
+                      
+                      <div>
+                      </div>
+                      <table align="center" id="rounded-corner3">
+                        <thead>
+                          <tr>
+                            <th width="205" class="caja1" scope="col">Datos de la solicitud</th>
+                            <th width="20" class="caja4" scope="col">&nbsp;</th>
+                          </tr>
+                        </thead>
+                        
+                        <tbody>
+						  <tr valign="middle">
+                            <td colspan="2" valign="middle" style="border-top: none">Codigo de Producto</td>
+                            <td width="359" align="left" class="rounded-top-right3"><input name="textfield2" type="text" class="iptSize" id="textfield2">
+                            
+                          </tr>
+                         
+                      
+                       <tr>
+                            <td colspan="2" valign="middle">Descripcion 1</td>
+                            <td align="left"><span class="rounded-top-right3">
+                              <input name="textfield7" type="text" class="iptSize2" id="textfield7">
+                            </span></td>
+                          </tr>
+                           <tr>
+                            <td colspan="2" valign="middle">Descripcion 2</td>
+                            <td align="left"><span class="rounded-top-right3">
+                              <input name="textfield7" type="text" class="iptSize2" id="textfield7">
+                            </span></td>
+                          </tr>
+						   <tr>
+                            <td colspan="2" valign="middle">Descripcion 3</td>
+                            <td align="left"><span class="rounded-top-right3">
+                              <input name="textfield7" type="text" class="iptSize2" id="textfield7">
+                            </span></td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" valign="middle">Combo</td>
+                            <td align="left">
+                              <select name="select3" class="iptSize" id="select3">
+                                <option value="1" selected>Op 1</option>
+                                <option value="2">Op 2</option>
+                                <option value="3">Op 3</option>
+                                <option value="4">Op 4</option>
+                              </select>
+                            </td>
+                          </tr>
+						  <tfoot>
+                          <tr valign="top">
+                            <td colspan="2" valign="middle" class="rounded-foot-left3">Descripcion 4</td>
+                            <td align="left" class="rounded-foot-right3"><input name="textfield9" type="text" class="iptSize" id="textfield9"></td>
+                          </tr>
+                        </tfoot>
+                          
+                          
+                        </tbody>
+                      </table>
+             
+
+             
+     				<table width="315" border="0" align="right" cellpadding="0" cellspacing="0">
+     				  <tr>
+     				    <td width="165"><a href="#"><img src="img/btn_enviar2.png" alt="Enviar" width="147" height="31"></a></td>
+     				    <td width="150"><a href="#" ><img src="img/btn_salir2.png" alt="Salir" width="147" height="31"></a></td>
+   				    </tr>
+   				  </table>
+     				<p>&nbsp;</p>
+</div><!-- /contenedor-internas -->
+                    </div> <!-- /contenedor-listado -->
+                <div class="listados-borde-redondeado-inferior"></div>
+            </div><!-- /contenido -->
+			
+            <div class="clear"></div>
+            
+			<div id="pie-de-pagina">
+                	<div class="contenedor-enlaces">
+						<div class="direccion">Compuval<br>
+							Av. Alfondo Ugarte 535, Lima<br>
+						  Teléfonos 615-13323  -   Fax: 442-3132<br>
+						  EMail: contacto@compuval.com
+						</div>
+                
+						<div class="logo-foot">
+						<p style="padding-top:10px;"align="right"><a href="#" title="Logo">Compuval</a><br>
+						  Copyright (c) 2005 - 2010 por Diners Club Perú S.A.</p>
+						  
+						</div>
+                
+					</div><!-- /contenedor-enlaces --><p>&nbsp;</p>
+            </div><!-- /pie-de-pagina -->
+		
+        </div><!-- /cuerpo -->
+		
+        <div class="borde-inferior-contenedor"><!-- genera la imagen de sombra y borde inferior --></div>
+    </div><!-- /contenedor -->
+  </form>
+
   </body>
 </html>
